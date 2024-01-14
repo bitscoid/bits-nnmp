@@ -15,11 +15,11 @@
   </h4>
 
   <div align="center">
-    <a href="https://hub.docker.com/r/bantenitsolutions/nnmp/" title="Nginx PHP NodeJS"><img src="https://img.shields.io/docker/pulls/bantenitsolutions/nnmp.svg"></a> 
-    <a href="https://hub.docker.com/r/bantenitsolutions/nnmp/" title="Docker Image Version (tag latest semver)"><img src="https://img.shields.io/docker/v/bantenitsolutions/nnmp/2.0"></a> 
-    <a href="https://hub.docker.com/r/bantenitsolutions/nnmp/tags" title="Docker Image Size (tag)"><img src="https://img.shields.io/docker/image-size/bantenitsolutions/nnmp/2.0"></a> 
-    <a href="https://hub.docker.com/r/bantenitsolutions/nnmp/" title="Nginx 1.25.3"><img src="https://img.shields.io/badge/nginx-1.25.3-brightgreen.svg"></a> 
-    <a href="https://hub.docker.com/r/bantenitsolutions/nnmp/" title="PHP 8.2"><img src="https://img.shields.io/badge/php-8.2-brightgreen.svg"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="Nginx PHP NodeJS"><img src="https://img.shields.io/docker/pulls/bantenitsolutions/bits-nnmp.svg"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="Docker Image Version (tag latest semver)"><img src="https://img.shields.io/docker/v/bantenitsolutions/bits-nnmp/2.0"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/tags" title="Docker Image Size (tag)"><img src="https://img.shields.io/docker/image-size/bantenitsolutions/bits-nnmp/2.0"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="Nginx 1.25.3"><img src="https://img.shields.io/badge/nginx-1.25.3-brightgreen.svg"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="PHP 8.2"><img src="https://img.shields.io/badge/php-8.2-brightgreen.svg"></a> 
     <a href="https://github.com/bitscoid/nnmp/actions/workflows/build.yml" title="Docker Test Image"><img src="https://github.com/bitscoid/nnmp/actions/workflows/build.yml/badge.svg?branch=master"></a> 
     <a href="https://bits.co.id" title="License MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a> 
   </div>
@@ -124,20 +124,20 @@ the best practices and is easy to understand and modify to your needs.
 
 Start the Docker container:
 
-    docker run -p 80:80 bantenitsolutions/nnmp
+    docker run -p 80:80 bantenitsolutions/bits-nnmp
 
 See the PHP info on http://localhost
 
 Or mount your own code to be served by PHP-FPM & Nginx
 
-    docker run -p 80:80 -v ~/app:/var/www/bits bantenitsolutions/nnmp
+    docker run -p 80:80 -v ~/app:/var/www/bits bantenitsolutions/bits-nnmp
 
 For example, use this docker image to deploy a **Laravel 10** project.
 
 Dockerfile:
 
 ```dockerfile
-FROM bantenitsolutions/nnmp
+FROM bantenitsolutions/bits-nnmp
 
 # copy source code
 COPY . /var/www/bits
@@ -174,7 +174,7 @@ Make sure you have correct environment parameters set:
 version: '3.7'
 services:
     laravel.test:
-        image: 'bantenitsolutions/nnmp:latest'
+        image: 'bantenitsolutions/bits-nnmp:latest'
         ports:
             - '80:80'
         environment:
@@ -214,19 +214,19 @@ If you want to extend or customize that you can do so by mounting a configuratio
 
 Nginx Configuration:
 
-    docker run -v "./server/nginx/nginx.conf:/etc/nginx/http.d/default.conf" bantenitsolutions/nnmp
+    docker run -v "./server/nginx/nginx.conf:/etc/nginx/http.d/default.conf" bantenitsolutions/bits-nnmp
 
 Nginx Default Site:
 
-    docker run -v "./server/nginx/http.d/default.conf:/etc/nginx/http.d/default.conf" bantenitsolutions/nnmp
+    docker run -v "./server/nginx/http.d/default.conf:/etc/nginx/http.d/default.conf" bantenitsolutions/bits-nnmp
 
 PHP Configuration:
 
-    docker run -v "./server/php/php.ini:/usr/local/etc/php/php.ini" bantenitsolutions/nnmp
+    docker run -v "./server/php/php.ini:/usr/local/etc/php/php.ini" bantenitsolutions/bits-nnmp
 
 PHP-FPM Configuration:
 
-    docker run -v "./server/php/www.conf:/usr/local/etc/php-fpm.d/www.conf" bantenitsolutions/nnmp
+    docker run -v "./server/php/www.conf:/usr/local/etc/php-fpm.d/www.conf" bantenitsolutions/bits-nnmp
 
 ## Documentation
 Add extra PHP modules
@@ -234,7 +234,7 @@ Add extra PHP modules
 You may use this image as the base image to build your own. For example, to add mongodb module:
 Create a Dockerfile
 
-    FROM bantenitsolutions/nnmp
+    FROM bantenitsolutions/bits-nnmp
     RUN apk add --no-cache --update --virtual .phpize-deps $PHPIZE_DEPS \
         && apk add --no-cache --update --virtual .all-deps $PHP_MODULE_DEPS \
         && pecl install mongodb \
