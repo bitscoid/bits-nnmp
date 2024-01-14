@@ -20,7 +20,7 @@
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/tags" title="Docker Image Size (tag)"><img src="https://img.shields.io/docker/image-size/bantenitsolutions/bits-nnmp/2.0"></a> 
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="Nginx 1.25.3"><img src="https://img.shields.io/badge/nginx-1.25.3-brightgreen.svg"></a> 
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="PHP 8.2"><img src="https://img.shields.io/badge/php-8.2-brightgreen.svg"></a> 
-    <a href="https://github.com/bitscoid/nnmp/actions/workflows/build.yml" title="Docker Test Image"><img src="https://github.com/bitscoid/nnmp/actions/workflows/build.yml/badge.svg?branch=master"></a> 
+    <a href="https://github.com/bitscoid/bits-nnmp/actions/workflows/build.yml" title="Docker Test Image"><img src="https://github.com/bitscoid/bits-nnmp/actions/workflows/build.yml/badge.svg?branch=master"></a> 
     <a href="https://bits.co.id" title="License MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a> 
   </div>
 </div>
@@ -30,7 +30,7 @@
 
 Example PHP-FPM 8.2 & Nginx 1.25 container image for Docker, built on [Alpine Linux](https://www.alpinelinux.org/).
 
-Repository: https://github.com/bitscoid/nnmp
+Repository: https://github.com/bitscoid/bits-nnmp
 
 * Built on the lightweight and secure Alpine Linux distribution
 * Multi-platform, supporting AMD4, ARMv6, ARMv7, ARM64
@@ -160,7 +160,7 @@ RUN cd /var/www/bits \
     && chown -Rf nobody:nobody /var/www/bits
 ```
 
-You may check [run.sh](https://github.com/bitscoid/nnmp/blob/master/run.sh) for more information about what it can do.
+You may check [run.sh](https://github.com/bitscoid/bits-nnmp/blob/master/run.sh) for more information about what it can do.
 
 
 ### Develop with this image
