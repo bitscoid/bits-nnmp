@@ -8,17 +8,10 @@
     </a>
   </div>
 
-<<<<<<< HEAD
   <h1 align="center">BITS NNMP Nginx 1.25, NodeJS 21.4, MariaDB & PHP-FPM 8 on Alpine Linux</h1>
 
   <h4 align="center">
     Lightweight & optimized <a href="https://www.docker.com/blog/how-to-rapidly-build-multi-architecture-images-with-buildx/">Multi-Arch Docker Images</a> (<code>x86_64</code>/<code>arm</code>/<code>arm64</code>) for <a href="http://nginx.org/en/CHANGES">Nginx 1.25.3</a>, <a href="https://www.php.net/manual/en/install.fpm.php">PHP-FPM</a> <a href="https://www.php.net/ChangeLog-8.php#PHP_8_0">8</a> & <a href="https://nodejs.org/en/blog/release/v21.4.0">NodeJS 21.4</a>) with essential php extensions on top of latest Alpine Linux.
-=======
-  <h1 align="center">BITS NNMP Nginx 1.25, NodeJS 21.4, MariaDB & PHP-FPM 8.1 on Alpine Linux</h1>
-
-  <h4 align="center">
-    Lightweight & optimized <a href="https://www.docker.com/blog/how-to-rapidly-build-multi-architecture-images-with-buildx/">Multi-Arch Docker Images</a> (<code>x86_64</code>/<code>arm</code>/<code>arm64</code>) for <a href="http://nginx.org/en/CHANGES">Nginx 1.25.3</a>, <a href="https://www.php.net/manual/en/install.fpm.php">PHP-FPM</a> <a href="https://www.php.net/ChangeLog-8.php#PHP_8_1">8.1</a> & <a href="https://nodejs.org/en/blog/release/v21.4.0">NodeJS 21.4</a>) with essential php extensions on top of latest Alpine Linux.
->>>>>>> 29cb2e270d39eef129e51ec932de8270b120a80e
   </h4>
 
   <div align="center">
@@ -26,11 +19,7 @@
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="Docker Image Version (tag latest semver)"><img src="https://img.shields.io/docker/v/bantenitsolutions/bits-nnmp/1.0"></a> 
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/tags" title="Docker Image Size (tag)"><img src="https://img.shields.io/docker/image-size/bantenitsolutions/bits-nnmp/1.0"></a> 
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="Nginx 1.25.3"><img src="https://img.shields.io/badge/nginx-1.25.3-brightgreen.svg"></a> 
-<<<<<<< HEAD
     <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="PHP 8"><img src="https://img.shields.io/badge/php-8-brightgreen.svg"></a> 
-=======
-    <a href="https://hub.docker.com/r/bantenitsolutions/bits-nnmp/" title="PHP 8.1"><img src="https://img.shields.io/badge/php-8.1-brightgreen.svg"></a> 
->>>>>>> 29cb2e270d39eef129e51ec932de8270b120a80e
     <a href="https://github.com/bitscoid/bits-nnmp/actions/workflows/build.yml" title="Docker Test Image"><img src="https://github.com/bitscoid/bits-nnmp/actions/workflows/build.yml/badge.svg?branch=master"></a> 
     <a href="https://bits.co.id" title="License MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a> 
   </div>
@@ -39,22 +28,14 @@
 
 ## Description
 
-<<<<<<< HEAD
 Example PHP-FPM 8 & Nginx 1.25 container image for Docker, built on [Alpine Linux](https://www.alpinelinux.org/).
-=======
-Example PHP-FPM 8.1 & Nginx 1.25 container image for Docker, built on [Alpine Linux](https://www.alpinelinux.org/).
->>>>>>> 29cb2e270d39eef129e51ec932de8270b120a80e
 
 Repository: https://github.com/bitscoid/bits-nnmp
 
 * Built on the lightweight and secure Alpine Linux distribution
 * Multi-platform, supporting AMD4, ARMv6, ARMv7, ARM64
 * Very small Docker image size (+/-140MB)
-<<<<<<< HEAD
 * Uses PHP 8 for the best performance, low CPU usage & memory footprint
-=======
-* Uses PHP 8.1 for the best performance, low CPU usage & memory footprint
->>>>>>> 29cb2e270d39eef129e51ec932de8270b120a80e
 * Optimized for 100 concurrent users
 * Optimized to only use resources when there's traffic (by using PHP-FPM's `on-demand` process manager)
 * The services Nginx, PHP-FPM and supervisord run under a non-privileged user (nobody) to make it more secure
@@ -69,11 +50,7 @@ the best practices and is easy to understand and modify to your needs.
 ## Nginx & PHP Version
 
     # php -v
-<<<<<<< HEAD
     PHP 8.0 (cli) (built: Nov 30 2023 23:39:07) (NTS)
-=======
-    PHP 8.1.0 (cli) (built: Nov 30 2023 23:39:07) (NTS)
->>>>>>> 29cb2e270d39eef129e51ec932de8270b120a80e
     Copyright (c) The PHP Group
     Zend Engine v4.3.0, Copyright (c) Zend Technologies
         with Zend OPcache v8.0, Copyright (c), by Zend Technologies
