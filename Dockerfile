@@ -1,5 +1,5 @@
 FROM node:current-alpine3.18 AS nodejs
-FROM bantenitsolutions/nginx-php:php-7.4
+FROM bantenitsolutions/nginx-php:php-8.2
 
 LABEL Maintainer="Nurul Imam <bits.co.id>" \
     Description="Nginx, NodeJS, MariaDB & PHP with essential php extensions on top of latest Alpine Linux."
